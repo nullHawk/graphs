@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class CountingRooms{
-    public static void main(String[] main){
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
@@ -26,7 +26,7 @@ class CountingRooms{
     }
 
     static void dfs(char[][] map, boolean[][] visited, int currI, int currJ, int n, int m){
-        if(currI == n || currJ == m || map[currI][currJ] == '#' || visited[currI][currJ]){
+        if(currI < 0 || currI >= n || currJ < 0 || currJ >= m || map[currI][currJ] == '#' || visited[currI][currJ]){
             return;
         }
         visited[currI][currJ] = true;

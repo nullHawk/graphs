@@ -19,7 +19,7 @@ class BuildingRoads{
             edges[u].add(v);
             edges[v].add(u);
         }
-        int numConnectedComponents = 0;
+        
         for(int i = 1; i <= n; i++){
             if(!visited[i]){
                 bridges.add(i);
